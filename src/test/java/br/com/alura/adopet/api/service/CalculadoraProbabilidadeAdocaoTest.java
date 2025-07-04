@@ -17,8 +17,7 @@ class CalculadoraProbabilidadeAdocaoTest {
     @Test
     @DisplayName("Probabilidade alta para gatos jovens com peso baixo")
     void probabilidadeAltaCenario1() {
-        // idade 4 e 4kg - ALTA
-
+        // ARRANGE
         Abrigo abrigo = new Abrigo(new CadastroAbrigoDTO(
                 "Abrigo feliz",
                 "94999999999",
@@ -32,18 +31,19 @@ class CalculadoraProbabilidadeAdocaoTest {
                 "Cinza",
                 4.0f
         ), abrigo);
-
         CalculadoraProbabilidadeAdocao calculadora = new CalculadoraProbabilidadeAdocao();
+
+        // ACT
         ProbabilidadeAdocao probabilidade = calculadora.calcular(pet);
 
+        // ASSERT
         assertEquals(ProbabilidadeAdocao.ALTA, probabilidade);
     }
 
     // Método 2 para melhorar a legibilidade de testes
     @Test
     void deveriaRetornarProbabilidadeMediaParaPetComIdadeAltaEPesoBaixo() {
-        // idade 15 e 4kg - MEDIA
-
+        // ARRANGE
         Abrigo abrigo = new Abrigo(new CadastroAbrigoDTO(
                 "Abrigo feliz",
                 "94999999999",
@@ -57,10 +57,12 @@ class CalculadoraProbabilidadeAdocaoTest {
                 "Cinza",
                 4.0f
         ), abrigo);
-
         CalculadoraProbabilidadeAdocao calculadora = new CalculadoraProbabilidadeAdocao();
+
+        // ACT
         ProbabilidadeAdocao probabilidade = calculadora.calcular(pet);
 
+        // ASSERT
         assertEquals(ProbabilidadeAdocao.MEDIA, probabilidade);
     }
 }
