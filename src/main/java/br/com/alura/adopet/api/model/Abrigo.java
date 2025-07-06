@@ -1,6 +1,6 @@
 package br.com.alura.adopet.api.model;
 
-import br.com.alura.adopet.api.dto.CadastroAbrigoDTO;
+import br.com.alura.adopet.api.dto.CadastroAbrigoDto;
 import jakarta.persistence.*;
 
 import java.util.Objects;
@@ -22,7 +22,7 @@ public class Abrigo {
     public Abrigo() {
     }
 
-    public Abrigo(CadastroAbrigoDTO dto) {
+    public Abrigo(CadastroAbrigoDto dto) {
         this.nome = dto.nome();
         this.telefone = dto.telefone();
         this.email = dto.email();
@@ -56,4 +56,5 @@ public class Abrigo {
     public String getEmail() {
         return email;
     }
+
 }

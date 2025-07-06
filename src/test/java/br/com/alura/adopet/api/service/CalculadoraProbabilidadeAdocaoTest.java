@@ -1,7 +1,7 @@
 package br.com.alura.adopet.api.service;
 
-import br.com.alura.adopet.api.dto.CadastroAbrigoDTO;
-import br.com.alura.adopet.api.dto.CadastroPetDTO;
+import br.com.alura.adopet.api.dto.CadastroAbrigoDto;
+import br.com.alura.adopet.api.dto.CadastroPetDto;
 import br.com.alura.adopet.api.model.Abrigo;
 import br.com.alura.adopet.api.model.Pet;
 import br.com.alura.adopet.api.model.ProbabilidadeAdocao;
@@ -18,12 +18,12 @@ class CalculadoraProbabilidadeAdocaoTest {
     @DisplayName("Probabilidade alta para gatos jovens com peso baixo")
     void probabilidadeAltaCenario1() {
         // ARRANGE
-        Abrigo abrigo = new Abrigo(new CadastroAbrigoDTO(
+        Abrigo abrigo = new Abrigo(new CadastroAbrigoDto(
                 "Abrigo feliz",
                 "94999999999",
                 "abrigofeliz@email.com.br"
         ));
-        Pet pet = new Pet(new CadastroPetDTO(
+        Pet pet = new Pet(new CadastroPetDto(
                 TipoPet.GATO,
                 "Miau",
                 "Siames",
@@ -44,12 +44,12 @@ class CalculadoraProbabilidadeAdocaoTest {
     @Test
     void deveriaRetornarProbabilidadeMediaParaPetComIdadeAltaEPesoBaixo() {
         // ARRANGE
-        Abrigo abrigo = new Abrigo(new CadastroAbrigoDTO(
+        Abrigo abrigo = new Abrigo(new CadastroAbrigoDto(
                 "Abrigo feliz",
                 "94999999999",
                 "abrigofeliz@email.com.br"
         ));
-        Pet pet = new Pet(new CadastroPetDTO(
+        Pet pet = new Pet(new CadastroPetDto(
                 TipoPet.GATO,
                 "Miau",
                 "Siames",

@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TutorRepository extends JpaRepository<Tutor, Long> {
 
-    boolean existsByEmailOrTelefone(String email, String telefone);
+    boolean existsByTelefoneOrEmail(String telefone, String email);
 
 }

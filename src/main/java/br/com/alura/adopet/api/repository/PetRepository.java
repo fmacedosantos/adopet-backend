@@ -8,9 +8,7 @@ import java.util.List;
 
 public interface PetRepository extends JpaRepository<Pet, Long> {
 
-    boolean existsByIdAndAdotado(Long petId, boolean adotado);
-
-    List<Pet> findAllByAdotado(boolean adotado);
+    List<Pet> findAllByAdotadoFalse();
 
     List<Pet> findByAbrigo(Abrigo abrigo);
 }
